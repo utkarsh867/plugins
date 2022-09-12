@@ -327,7 +327,7 @@ class Camera
                   cameraFeatures.getAutoFocus().getValue(),
                   cameraFeatures.getExposurePoint().checkIsSupported(),
                   cameraFeatures.getFocusPoint().checkIsSupported());
-            } catch (CameraAccessException e | RuntimeException e) {
+            } catch (CameraAccessException | RuntimeException e) {
               dartMessenger.sendCameraErrorEvent(e.getMessage());
               close();
             }
